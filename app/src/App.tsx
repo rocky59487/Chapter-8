@@ -5,6 +5,8 @@ import { Home } from './screens/Home';
 import { Lesson } from './screens/Lesson';
 import { Exam } from './screens/Exam';
 import { Library } from './screens/Library';
+import { Profile } from './screens/Profile';
+import { BottomNav } from './components/BottomNav';
 import { useSettings } from './store/settings';
 
 export function App() {
@@ -30,10 +32,13 @@ export function App() {
           <Exam />
         ) : name === 'library' ? (
           <Library />
+        ) : name === 'profile' ? (
+          <Profile />
         ) : (
           <Home />
         )}
       </main>
+      {!inLesson && <BottomNav active={name} />}
     </>
   );
 }
