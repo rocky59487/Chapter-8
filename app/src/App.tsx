@@ -4,6 +4,7 @@ import { HUD } from './components/HUD';
 import { Home } from './screens/Home';
 import { Lesson } from './screens/Lesson';
 import { Exam } from './screens/Exam';
+import { Library } from './screens/Library';
 import { useSettings } from './store/settings';
 
 export function App() {
@@ -27,6 +28,8 @@ export function App() {
           <Lesson lessonId={params[0]} />
         ) : name === 'exam' ? (
           <Exam />
+        ) : name === 'library' ? (
+          <Library />
         ) : (
           <Home />
         )}

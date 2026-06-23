@@ -44,10 +44,15 @@ export function Home() {
             </div>
           </div>
           <p className="ink-soft mt-4 leading-7 text-sm sm:text-base">{pack.description}</p>
-          <div className="flex flex-wrap gap-2 mt-4 text-xs">
+          <div className="flex flex-wrap items-center gap-2 mt-4 text-xs">
             <Chip>📚 {pack.units.length} 單元</Chip>
             <Chip>🎯 {flat.length} 關卡</Chip>
             <Chip>⏱ 約 {pack.estimatedMinutes} 分鐘</Chip>
+            <button onClick={() => navigate('#/library')}
+              className="ml-auto px-3 py-1.5 rounded-full font-semibold ink"
+              style={{ background: 'var(--surface)', border: '1px solid var(--border-strong)' }}>
+              📂 課程庫
+            </button>
           </div>
         </div>
       </motion.div>

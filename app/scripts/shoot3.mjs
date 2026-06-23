@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const OUT = '/tmp/claude-0/-home-user-Chapter-8/169dd050-0012-548e-9981-d0200d81b81d/scratchpad';
+const BASE = 'http://localhost:4173';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 440, height: 900 }, deviceScaleFactor: 2 });
+const page = await ctx.newPage();
+const errs = []; page.on('pageerror', e => errs.push(e.message));
+await page.goto(`${BASE}/#/library`, { waitUntil: 'networkidle' }); await page.waitForTimeout(900);
+await page.screenshot({ path: `${OUT}/20-library.png`, fullPage: true });
+await page.goto(`${BASE}/#/exam`, { waitUntil: 'networkidle' }); await page.waitForTimeout(1500);
+await page.screenshot({ path: `${OUT}/21-exam-top.png` });
+console.log('ERRORS:', errs.length ? errs : 'none');
+await b.close();

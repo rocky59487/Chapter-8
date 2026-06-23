@@ -1,0 +1,33 @@
+{
+  "name": "Lumina · 互動學習平台",
+  "short_name": "Lumina",
+  "description": "Lumina — a course-pack driven interactive learning platform.",
+  "lang": "zh-Hant",
+  "dir": "ltr",
+  "theme_color": "#070d18",
+  "background_color": "#070d18",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "./",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
+}
